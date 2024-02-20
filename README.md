@@ -1,10 +1,12 @@
 # Assignment 3: Antymology
 
-This goal of this assignment is to simulate an ant colony behaviour in a random environment with different type of blocks, which could correspond to different biomes in real life.
+The goal of this assignment is to simulate an ant colony behaviour in a random environment with different type of blocks, which could correspond to different biomes in real life.
 
 ## Goal
 
-We will model a basic set of behaviours and then use a neural network or an evolutionary algorithm to maximises the nest production.
+We will model a basic set of behaviours to make the ants feel more natural.
+
+And then we use a neural network or an evolutionary algorithm to maximises the nest production.
 
 ### Agents
 
@@ -37,7 +39,7 @@ I then added the movement function to the AntBehaviour.cs which will choose a ra
 
 Then I added Mulch consumption, HealthUpdate and DigUp fucntions which made the ants more ant like.
 
-The next steps that I need to take are finishing up the basic behaviors and move to implementing the evolutionary algorithm which is no longer possible due health issues and time constraints.
+Due to health issues I couldn't fully finish the project but the next steps that I needed to take were finishing up the basic behaviors and move to implementing the evolutionary algorithm, which is no longer possible due time constraints.
 
 
 
