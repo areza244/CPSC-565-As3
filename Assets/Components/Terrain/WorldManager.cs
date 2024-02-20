@@ -1,5 +1,4 @@
 ﻿using Antymology.Helpers;
-using Antymology.Agents;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +14,7 @@ namespace Antymology.Terrain
         /// <summary>
         /// The prefab containing the ant.
         /// </summary>
-        public GameObject Ant;
+        public GameObject antPrefab;
         
         /// <summary>
         /// The material used for eech block.
