@@ -1,4 +1,5 @@
 ﻿using Antymology.Helpers;
+using Antymology.Agents;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Antymology.Terrain
         /// <summary>
         /// The prefab containing the ant.
         /// </summary>
-        public GameObject antPrefab;
+        public GameObject Ant;
         
         /// <summary>
         /// The material used for eech block.
@@ -25,10 +26,11 @@ namespace Antymology.Terrain
         /// The raw data of the underlying world structure.
         /// </summary>
         private AbstractBlock[,,] Blocks;
-
+        public GameObject[] Ants;
         /// <summary>
         /// Reference to the geometry data of the chunks.
         /// </summary>
+        /// 
         private Chunk[,,] Chunks;
 
         /// <summary>
@@ -89,21 +91,22 @@ namespace Antymology.Terrain
         private void GenerateAnts()
         {
             int numberOfAnts = 1000; 
-
+            Ants = new GameObject[numberOfAnts];
             for (int i = 0; i < numberOfAnts; i++)
             {
-                int x = RNG.Next(0, Blocks.GetLength(0));
-                int z = RNG.Next(0, Blocks.GetLength(2));
+                int x = RNG.Next(1, Blocks.GetLength(0)-1);
+                int z = RNG.Next(1, Blocks.GetLength(2)-1);
                 int y = FindGroundLevel(x, z);
 
-                if (y >= 0) 
-                {
-                    Vector3 antPosition = new Vector3(x, y + 1, z); 
-                    Instantiate(antPrefab, antPosition, Quaternion.identity);
-                }
+                
+                
+                Vector3 antPosition = new Vector3(x, (float) y + 0.57f , z); 
+                Ants[i] = Instantiate(antPrefab, antPosition, Quaternion.identity);
+                
             }
         }
         private int FindGroundLevel(int x, int z)
+
         {
             for (int y = Blocks.GetLength(1) - 1; y >= 0; y--)
             {
