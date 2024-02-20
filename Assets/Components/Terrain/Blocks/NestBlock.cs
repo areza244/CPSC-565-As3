@@ -19,7 +19,15 @@ namespace Antymology.Terrain
         /// Statically held is visible.
         /// </summary>
         private static bool _isVisible = true;
-        public override string BlockType => "Nest";
+
+        /// <summary>
+        /// Get the Block type
+        /// </summary>
+        public override string BlockType 
+        { 
+            get => "NestBlock"; 
+        }
+
         #endregion
 
         #region Methods

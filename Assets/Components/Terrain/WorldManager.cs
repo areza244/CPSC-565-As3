@@ -89,23 +89,22 @@ namespace Antymology.Terrain
         /// </summary>
         private void GenerateAnts()
         {
-            int numberOfAnts = 1000; 
+            int numberOfAnts = ConfigurationManager.Instance.Number_Of_Ants;
             Ants = new GameObject[numberOfAnts];
             for (int i = 0; i < numberOfAnts; i++)
             {
                 int x = RNG.Next(1, Blocks.GetLength(0)-1);
                 int z = RNG.Next(1, Blocks.GetLength(2)-1);
                 int y = FindGroundLevel(x, z);
-
-                
-                
                 Vector3 antPosition = new Vector3(x, (float) y + 0.57f , z); 
                 Ants[i] = Instantiate(antPrefab, antPosition, Quaternion.identity);
-                
             }
         }
-        private int FindGroundLevel(int x, int z)
 
+        /// <summary>
+        /// finding the ground level of the environment
+        /// </summary>
+        private int FindGroundLevel(int x, int z)
         {
             for (int y = Blocks.GetLength(1) - 1; y >= 0; y--)
             {

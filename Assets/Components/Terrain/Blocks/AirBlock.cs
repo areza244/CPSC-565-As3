@@ -25,6 +25,14 @@ namespace Antymology.Terrain
         /// THIS CURRENTLY ONLY EXISTS AS A WAY OF SHOWING YOU HOW YOU CAN MANIPULATE THE BLOCKS.
         /// </summary>
         private Dictionary<byte, double> phermoneDeposits;
+        
+         /// <summary>
+        /// Get the Block type
+        /// </summary>
+        public override string BlockType 
+        { 
+            get => "AirBlock"; 
+        }
 
         #endregion
 

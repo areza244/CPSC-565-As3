@@ -42,12 +42,12 @@ namespace Antymology.Terrain
         /// <summary>
         /// The Unity mesh renderer component of this chunk object.
         /// </summary>
-        MeshRenderer renderer;
+        public new MeshRenderer renderer;
 
         /// <summary>
         /// The collider of this mesh
         /// </summary>
-        MeshCollider collider;
+        public new MeshCollider collider;
 
         #endregion
 

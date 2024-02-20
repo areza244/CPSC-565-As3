@@ -19,6 +19,14 @@ namespace Antymology.Terrain
         /// </summary>
         private static bool _isVisible = true;
 
+        /// <summary>
+        /// Get the Block type
+        /// </summary>
+        public override string BlockType 
+        { 
+            get => "ContainerBlock"; 
+        }
+
         #endregion
 
         #region Methods
