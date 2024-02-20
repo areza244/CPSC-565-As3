@@ -41,9 +41,9 @@ The next steps that I need to take are finishing up the basic behaviors and move
 
 
 
-![Ant Animation](ant.gif) 
+![Ant Animation](Images/ant.gif) 
 
 
 
 
-![Ant Screenshot](Screenshot_74.jpg)
+![Ant Screenshot](Images/Screen.jpg)
